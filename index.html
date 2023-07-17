@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<html>
+		<style></style>
+		<head>
+			<meta charset="utf-8" />
+			<title>Kanishk K U | Personal workbench</title>
+			<meta name="description" content="portfolio housing various labs and projects worked upon" />
+			<meta property="og:title" content="Personal workbench" />
+			<meta property="og:url" content="https://kanishk.io/" />
+			<meta property="og:description" content="Portfolio housing various projects and tinkers worked upon" />
+			<meta property="og:image" content="" />
+			<link rel="stylesheet" href="styling/style.css" />
+			<meta name="viewport" content="width=devide-width, initial-scale=1.0" />
+			<link rel="shortcut icon" type="image/png" href="/resources/logo/twodots.png" />
+			<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
+		</head>
+		<body>
+			<div class="main-wrapper">
+				<div class="header-nav"></div>
+				<div class="content-wrapper">
+					<div class="hero-wrapper" id="hero-wrapper">
+						<div class="flex-pair">
+							<div class="heading">Hi, I'm Kanishk K U</div>
+							<div class="subheading">
+								I'm an engineer who loves design🖍️, electronics💡, & sky✈️. Currently, I'm helping to build
+								 <a href="https://utm.airdonex.com/" target="blank"><b>Airdonex</b></a> focusing on logic and aesthetics.
+								  As a hobbyist, I enjoy tinkering, football, and put my good snaps on <a href="https://www.instagram.com/kanishk.k.u/" target="blank"><b>instagram</b></a>, 
+								  and random snaps on <a href="https://twitter.com/kanishk_k_u" target="blank"><b>twitter</b></a> 
+								  <!-- & Professional snaps on <a href="https://www.linkedin.com/in/kanishk-k-u/" target="blank"><b>linkedin -->
+							</div>
+						</div>
+					</div>
+					<div id="projects">
+						<div class="flex-wrapper" id="labs-list">
+							<div class="project-list">
+								<a href="https://github.com/Kanishk-K-U/AHB2APB-Bridge-Controller" target="_blank">
+									<div class="heading" style="display: flex">AHB2APB Bridge Controller<img src="resources/flying-saucer.svg" alt="flying-saucer" style="margin-left: 4px; filter: drop-shadow(0px 0px 8px #83e2ff)" /></div>
+									<div class="subheading">a vital component, seamlessly bridging & effortlessly translates between the AHB and APB buses</div>
+								</a>
+							</div>
+							<div class="project-list">
+								<a href="https://github.com/Kanishk-K-U/SPI-I2C-Protocol" target="_blank">
+									<div class="heading" style="display: flex">SPI & I2C Protocol<img src="resources/star.svg" alt="star" style="margin-left: 4px; filter: drop-shadow(0px 0px 8px #f6c24c)" /></div>
+									<div class="subheading">enabling seamless and synchronized communication between devices in complex electronic systems</div>
+								</a>
+							</div>
+							<div class="project-list">
+								<a href="https://github.com/Kanishk-K-U/32x8-RAM" target="_blank">
+									<div class="heading" style="display: flex">32x8 RAM<img src="resources/highvoltage.svg" alt="highvoltage" style="margin-left: 4px; filter: drop-shadow(0px 0px 8px #f6c24c)" /></div>
+									<div class="subheading">Random Access Memory, the magical genie of computing, ready to vanish like a sneeze once the power is gone</div>
+								</a>
+							</div>
+							<div class="project-list">
+								<a href="https://github.com/Kanishk-K-U/ALU" target="_blank">
+									<div class="heading" style="display: flex">ALU<img src="resources/dna.svg" alt="dna" style="margin-left: 4px; filter: drop-shadow(0px 0px 8px #f6c24c)" /></div>
+							
+									<div class="subheading">Arithematic Logical Unit, aka brain of tech, an essential digital logic components of CPU to solve the problems of arithematic & logical ops</div>
+								</a>
+							</div>
+							<div class="project-list">
+								<a href="https://github.com/Kanishk-K-U/Adaptive-Cruise-Controlled-Car" target="_blank">
+									<div class="heading" style="display: flex">Adaptive Cruise Car<img src="resources/racing-car.svg" alt="race-car" style="margin-left: 4px; filter: drop-shadow(0px 0px 4px #ff9b9e)" /></div>
+									<div class="subheading">a fun project built with ACC system on the road essentially supports driving and manages the vehicle's acceleration</div>
+								</a>
+							</div>
+							<div class="project-list">
+								<a href="https://github.com/Kanishk-K-U/Auto-Home" target="_blank">
+									<div class="heading" style="display: flex">Auto Home<img src="resources/house-with-garden.svg" alt="house-with-garden" style="margin-left: 4px; filter: drop-shadow(0px 0px 4px #ddfccc)" /></div>
+									<div class="subheading">this Home Automation project, made simple to control home appliances securely from the smartphone through the internet</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-nav">
+					<div class="lhs">crafted with ♥</a> </div>
+					<div class="rhs">
+						<a href="/resources/Kanishk-CV.pdf" download="Kanishk-CV">Resume</a><a href="https://www.linkedin.com/in/kanishk-k-u/" target="_blank">Linkedin</a>
+						<a href="https://github.com/Kanishk-K-U" target="_blank">Github</a>
+					</div>
+				</div>
+			</div>
+			<script>
+				// Your web app's Firebase configuration
+				var firebaseConfig = {
+					apiKey: 'AIzaSyDIKLPF3926RNw8R-9yD_zRz_suu3jHVQw',
+					authDomain: 'twodots-c4f5a.firebaseapp.com',
+					databaseURL: 'https://twodots-c4f5a.firebaseio.com',
+					projectId: 'twodots-c4f5a',
+					storageBucket: 'twodots-c4f5a.appspot.com',
+					messagingSenderId: '835145283151',
+					appId: '1:835145283151:web:749609ec8165b29dfb1c3a',
+					measurementId: 'G-VMR74RHZD3',
+				};
+				// Initialize Firebase
+				firebase.initializeApp(firebaseConfig);
+				firebase.analytics();
+			</script>
+		</body>
+		<script src="js/script.js"></script>
+		<script src="js/theme.js"></script>
+	</html>
+</html>

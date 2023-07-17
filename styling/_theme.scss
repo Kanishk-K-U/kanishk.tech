@@ -1,0 +1,138 @@
+$a-b: var(--a-b);
+$f-h: var(--f-h);
+$f-m: var(--f-m);
+$f-l: var(--f-l);
+$b-h: var(--b-h);
+$b-m: var(--b-m);
+$b-l: var(--b-l);
+$t-f: var(--t-f);
+$t-b: var(--t-b);
+
+$f-t-cta: var(--f-t-cta);
+$l-s-cta: var(--l-s-cta);
+$l-h-cta: var(--l-h-cta);
+
+$f-t-h: var(--f-t-h);
+$l-s-h: var(--l-s-h);
+$l-h-h: var(--l-h-h);
+
+$f-t-sh: var(--f-t-sh);
+$l-s-sh: var(--l-s-sh);
+$l-h-sh: var(--l-h-sh);
+
+$f-t-nt: var(--f-t-nt);
+$l-s-nt: var(--l-s-nt);
+$l-h-nt: var(--l-h-nt);
+
+$f-t-body-2: var(--f-t-body-2);
+$l-s-body-2: var(--l-s-body-2);
+$l-h-body-2: var(--l-h-body-2);
+
+$f-t-body-1: var(--f-t-body-1);
+$l-s-body-1: var(--l-s-body-1);
+$l-h-body-1: var(--l-h-bodyp-1);
+
+@mixin cta {
+	color: $t-f;
+	font-family: heading, monospace;
+	font-size: $f-t-cta;
+	letter-spacing: $l-s-cta;
+	line-height: $l-h-cta;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer;
+	padding: 2vh;
+
+	&:hover {
+		color: $t-b;
+	}
+}
+
+@mixin heading {
+	color: $f-h;
+	display: flex;
+	background-color: $f-h;
+	font-family: mono-300, monospace;
+	font-size: $f-t-h;
+	letter-spacing: $l-s-h;
+	line-height: $l-h-h;
+	animation-name: transition-y;
+	animation-duration: 0.4s;
+	animation-direction: normal;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+	animation-delay: 1.2s;
+	opacity: 0;
+	@keyframes transition-y {
+		0% {
+			transform: translateY(2vh);
+		}
+		to {
+			opacity: 1;
+		}
+	}
+}
+
+@mixin sub-heading {
+	color: $f-m;
+	font-family: mono-300, monospace;
+	font-size: $f-t-sh;
+	letter-spacing: $l-s-sh;
+	line-height: $l-h-sh;
+	animation-name: transition-y;
+	animation-duration: 0.4s;
+	animation-direction: normal;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+	animation-delay: 1.4s;
+	opacity: 0;
+	@keyframes transition-y {
+		0% {
+			transform: translateY(2vh);
+		}
+		to {
+			opacity: 1;
+		}
+	}
+}
+
+@mixin nav-text {
+	color: $f-l;
+	font-family: heading;
+	font-size: $f-t-nt;
+	letter-spacing: 0px;
+	line-height: $l-h-nt;
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer;
+	&:hover {
+		color: $f-m;
+	}
+}
+
+@mixin body-1 {
+	color: $f-h;
+	font-family: mono-300, monospace;
+	font-size: $f-t-body-1;
+	letter-spacing: $l-s-body-1;
+	line-height: $l-h-body-1;
+}
+@mixin body-2 {
+	color: $f-m;
+	font-family: mono-300, monospace;
+	font-size: $f-t-body-2;
+	letter-spacing: $l-s-body-2;
+	line-height: $l-h-body-2;
+}
+
+@font-face {
+	src: url(/resources/fonts/mono-300.OTF);
+	font-family: mono-300;
+}
+
+@font-face {
+	src: url(/resources/fonts/heading.ttf);
+	font-family: heading;
+}

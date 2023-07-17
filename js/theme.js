@@ -1,6 +1,10 @@
 var breakPoint1, breakPoint2, breakPoint3, breakPoint4;
 const letterSpacingValue = -40;
 const lineHeightValue = 1.8;
+let currentTheme = 'stock'
+
+const whiteImg = '/resources/logo/logo-white.svg'
+const blckImg = '/resources/logo/logo-blck.svg'
 
 const Themes = {
 	stock: {
@@ -122,9 +126,10 @@ function declareFontInBreakpoints(fontType, fontSize1, fontSize2, fontSize3, fon
 function callHeader() {
 	document.querySelector('.header-nav').id = 'header-nav';
 
-	var logo = document.createElement('div');
+	var logo = document.createElement('img');
 	logo.classList.add('logo');
 	logo.id = 'logo';
+	logo.src = whiteImg;
 
 	var logoWrapper = document.createElement('div');
 	logoWrapper.classList.add('logo-wrapper');
@@ -146,9 +151,6 @@ function callHeader() {
 		return document.getElementById(idName);
 	}
 
-	idSelector(
-		'logo'
-	).outerHTML = `<svg id="1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" width="24" height="24"><style><![CDATA[#e1f34n7zt81l6_to {animation: e1f34n7zt81l6_to__to 3000ms linear 1 normal forwards}@keyframes e1f34n7zt81l6_to__to { 0% {transform: translate(0px,0px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 10% {transform: translate(0px,12px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 20% {transform: translate(12px,12px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 30% {transform: translate(12px,0px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 40% {transform: translate(0px,0px)} 100% {transform: translate(0px,0px)} }#e1f34n7zt81l7_to {animation: e1f34n7zt81l7_to__to 3000ms linear 1 normal forwards}@keyframes e1f34n7zt81l7_to__to { 0% {transform: translate(0px,0px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 10% {transform: translate(0px,-12px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 20% {transform: translate(-12px,-12px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 30% {transform: translate(-12px,0px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 40% {transform: translate(0px,0px)} 100% {transform: translate(0px,0px)} }]]></style><g id="e1f34n7zt81l2"><g id="e1f34n7zt81l3" transform="matrix(1 0 0 1 -160 -86)"><g id="e1f34n7zt81l4" transform="matrix(1 0 0 1 160 83)"><g id="e1f34n7zt81l5" transform="matrix(1 0 0 1 0 3)"><g id="e1f34n7zt81l6_to" transform="translate(0,0)"><circle id="e1f34n7zt81l6" r="4.888890" transform="translate(6,6)" fill="rgb(255,255,255)" fill-rule="evenodd" stroke="rgb(255,255,255)" stroke-width="2.222220"/></g><g id="e1f34n7zt81l7_to" transform="translate(0,0)"><circle id="e1f34n7zt81l7" r="4.888890" transform="translate(18,18)" fill="none" fill-rule="evenodd" stroke="rgb(255,255,255)" stroke-width="2.222220"/></g></g></g></g></g></svg>`;
 	idSelector('header-nav').style.background = 'var(--a-b)';
 	idSelector('header-nav').style.display = 'flex';
 	idSelector('header-nav').style.position = 'relative';
@@ -165,33 +167,21 @@ function callHeader() {
 	idSelector('logo-wrapper').style.paddingLeft = '0px';
 
 	function changeTheme() {
-		if (document.getElementById('2') == null && document.getElementById('3') == null) {
+		if (currentTheme === 'stock') {
+			currentTheme = 'warmSnow';
 			applyColourTheme('warmSnow');
-
-			document.getElementById(
-				'1'
-			).outerHTML = `<svg id="2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" width="24" height="24"><style><![CDATA[#evhp9hzm9nkc6_to {animation: evhp9hzm9nkc6_to__to 600ms linear 1 normal forwards}@keyframes evhp9hzm9nkc6_to__to { 0% {transform: translate(0px,0px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 50% {transform: translate(0px,12px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 100% {transform: translate(12px,12px)} }#evhp9hzm9nkc7_to {animation: evhp9hzm9nkc7_to__to 600ms linear 1 normal forwards}@keyframes evhp9hzm9nkc7_to__to { 0% {transform: translate(0px,0px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 50% {transform: translate(0px,-12px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 100% {transform: translate(-12px,-12px)} }]]></style><g id="evhp9hzm9nkc2"><g id="evhp9hzm9nkc3" transform="matrix(1 0 0 1 -160 -86)"><g id="evhp9hzm9nkc4" transform="matrix(1 0 0 1 160 83)"><g id="evhp9hzm9nkc5" transform="matrix(1 0 0 1 0 3)"><g id="evhp9hzm9nkc6_to" transform="translate(0,0)"><circle id="evhp9hzm9nkc6" r="4.888890" transform="translate(6,6)" fill="rgb(0,0,0)" fill-rule="evenodd" stroke="rgb(0,0,0)" stroke-width="2.222220"/></g><g id="evhp9hzm9nkc7_to" transform="translate(0,0)"><circle id="evhp9hzm9nkc7" r="4.888890" transform="translate(18,18)" fill="none" fill-rule="evenodd" stroke="rgb(0,0,0)" stroke-width="2.222220"/></g></g></g></g></g></svg>`;
-		} else if (document.getElementById('1') == null && document.getElementById('3') == null) {
-			console.log('b');
+			idSelector('logo').src = blckImg;
+		} else if (currentTheme === 'warmSnow') {
+			currentTheme = 'stock';
 			applyColourTheme('stock');
-
-			document.getElementById(
-				'2'
-			).outerHTML = `<svg id="3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" width="24" height="24"><style><![CDATA[#etz1smyjhqj6_to {animation: etz1smyjhqj6_to__to 600ms linear 1 normal forwards}@keyframes etz1smyjhqj6_to__to { 0% {transform: translate(12px,12px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 50% {transform: translate(12px,0px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 100% {transform: translate(0px,0px)} }#etz1smyjhqj7_to {animation: etz1smyjhqj7_to__to 600ms linear 1 normal forwards}@keyframes etz1smyjhqj7_to__to { 0% {transform: translate(-12px,-12px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 50% {transform: translate(-12px,0px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 100% {transform: translate(0px,0px)} }]]></style><g id="etz1smyjhqj2"><g id="etz1smyjhqj3" transform="matrix(1 0 0 1 -160 -86)"><g id="etz1smyjhqj4" transform="matrix(1 0 0 1 160 83)"><g id="etz1smyjhqj5" transform="matrix(1 0 0 1 0 3)"><g id="etz1smyjhqj6_to" transform="translate(12,12)"><circle id="etz1smyjhqj6" r="4.888890" transform="translate(6,6)" fill="rgb(255,255,255)" fill-rule="evenodd" stroke="rgb(255,255,255)" stroke-width="2.222220"/></g><g id="etz1smyjhqj7_to" transform="translate(-12,-12)"><circle id="etz1smyjhqj7" r="4.888890" transform="translate(18,18)" fill="none" fill-rule="evenodd" stroke="rgb(255,255,255)" stroke-width="2.222220"/></g></g></g></g></g></svg>`;
-		} else if (document.getElementById('1') == null && document.getElementById('2') == null) {
-			console.log('c');
-			applyColourTheme('warmSnow');
-
-			document.getElementById(
-				'3'
-			).outerHTML = `<svg id="2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" width="24" height="24"><style><![CDATA[#evhp9hzm9nkc6_to {animation: evhp9hzm9nkc6_to__to 600ms linear 1 normal forwards}@keyframes evhp9hzm9nkc6_to__to { 0% {transform: translate(0px,0px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 50% {transform: translate(0px,12px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 100% {transform: translate(12px,12px)} }#evhp9hzm9nkc7_to {animation: evhp9hzm9nkc7_to__to 600ms linear 1 normal forwards}@keyframes evhp9hzm9nkc7_to__to { 0% {transform: translate(0px,0px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 50% {transform: translate(0px,-12px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 100% {transform: translate(-12px,-12px)} }]]></style><g id="evhp9hzm9nkc2"><g id="evhp9hzm9nkc3" transform="matrix(1 0 0 1 -160 -86)"><g id="evhp9hzm9nkc4" transform="matrix(1 0 0 1 160 83)"><g id="evhp9hzm9nkc5" transform="matrix(1 0 0 1 0 3)"><g id="evhp9hzm9nkc6_to" transform="translate(0,0)"><circle id="evhp9hzm9nkc6" r="4.888890" transform="translate(6,6)" fill="rgb(0,0,0)" fill-rule="evenodd" stroke="rgb(0,0,0)" stroke-width="2.222220"/></g><g id="evhp9hzm9nkc7_to" transform="translate(0,0)"><circle id="evhp9hzm9nkc7" r="4.888890" transform="translate(18,18)" fill="none" fill-rule="evenodd" stroke="rgb(0,0,0)" stroke-width="2.222220"/></g></g></g></g></g></svg>`;
+			idSelector('logo').src = whiteImg;
 		}
 	}
 }
 
 // define the theme here
 
-applyColourTheme('stock');
+applyColourTheme(currentTheme);
 
 declareBreakpoints(1440, 900, 720, 560);
 
